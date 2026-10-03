@@ -1112,6 +1112,84 @@ section { padding-block: clamp(4.5rem, 9vw, 8rem); }
   text-align: center;
 }
 
+/* --- Donor proposal document card --------------------------------------- */
+.doc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  max-width: 420px;
+  margin-inline: auto;
+  aspect-ratio: 8.5 / 11;
+  width: 100%;
+  padding: clamp(1.75rem, 5vw, 2.75rem);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.doc-card:hover { transform: translateY(-4px) rotate(-.5deg); }
+@media (max-width: 860px) { .doc-card { max-width: 300px; } }
+.doc-card__bar { display: flex; height: 6px; margin-bottom: .6rem; }
+.doc-card__bar i:nth-child(1) { flex: 2; background: #cdbf93; }
+.doc-card__bar i:nth-child(2) { flex: 3; background: #a5e5d6; }
+.doc-card__bar i:nth-child(3) { flex: 4; background: #f47a3c; }
+.doc-card__bar i:nth-child(4) { flex: 5; background: #6b5a43; }
+.doc-card__kicker {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+}
+.doc-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.4vw, 2rem);
+  font-weight: 600;
+  line-height: 1.12;
+  color: var(--green-800);
+}
+.doc-card__date { font-size: .9rem; color: var(--muted); }
+.doc-card__org {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 2px solid var(--gold-500);
+  font-size: .82rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.doc-card__badge {
+  position: absolute;
+  top: 1.1rem;
+  right: -.6rem;
+  padding: .3rem .75rem;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: #fff;
+  background: var(--green-700);
+  border-radius: 2px;
+  box-shadow: var(--shadow-sm);
+}
+.doc-list { margin-block: 1.25rem 1.75rem; }
+.doc-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: .55rem;
+}
+.doc-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .65em;
+  width: .7rem;
+  height: 2px;
+  background: var(--gold-500);
+}
+.doc-meta { margin-top: 1rem; font-size: .86rem; color: var(--muted); }
+
 /* --- CTA band ------------------------------------------------------------ */
 .cta-band {
   position: relative;
