@@ -13,6 +13,7 @@ A static site — no build step, no dependencies, no framework.
 | `index.html` | Home — the need, work already done, vision, gallery preview, donate |
 | `project.html` | Full project plan — Centre of Excellence, the 8 centres, the Waqf, costs |
 | `gallery.html` | 39 photographs with theme filters and a lightbox |
+| `videos.html` | Every SAJDA YouTube video, played in an on-page player |
 | `donate.html` | M-Pesa steps, other ways to give, committee contacts |
 
 ## Structure
@@ -21,6 +22,8 @@ A static site — no build step, no dependencies, no framework.
 assets/
   css/styles.css     all styling (design tokens at the top)
   js/main.js         nav, scroll reveal, counters, gallery filters, lightbox, copy buttons
+  js/videos.js       the video list + video cards + on-page player
+  docs/              PDFs offered for download (donor proposal, request letter)
   img/
     hero.jpg         homepage hero (2000px)
     band-*.jpg       full-bleed section backgrounds (2000px)
@@ -49,13 +52,22 @@ as plain text elsewhere; search for `226,000,000` and `80,000,000`.
 percentage you want filled. It currently illustrates the Waqf share of the total, not money
 raised. If you start showing money raised, update the caption beneath it too.
 
+**Adding a YouTube video** — open `assets/js/videos.js` and add an entry at the top of
+`SAJDA_VIDEOS` (newest first): the YouTube `id` (the part after `youtu.be/` or `shorts/`), a
+`title`, `tag`, `duration` and one-line `desc`, plus `vertical: true` for a Short. A `thumb`
+image is optional; without one, YouTube's own thumbnail is used. The homepage shows the newest
+three and `videos.html` shows them all.
+
+**Adding a document** — put the PDF in `assets/docs/` with a web-safe name (no spaces), then
+copy one of the `<article class="doc">` blocks in the Documents section of `index.html`.
+
 **Adding gallery photographs** — add the three sizes under `thumbs/`, `med/` (if used inline)
 and `gallery/`, then copy an existing `.gallery__item` button in `gallery.html` and set
 `data-category` to one of `progress`, `learning`, `children`, `need`.
 
 ## Source media
 
-The original photographs and video live in `Documentary/` (~3.5 GB) and are **excluded from git**
+The original photographs and video live in `Documentary/` (~3.5 GB) and `New Film/` (~7.6 GB) and are **excluded from git**
 via `.gitignore`, along with the source `.pptx`. Only the web-sized derivatives in `assets/img/`
 are committed. Keep the originals backed up separately — they are not in this repository.
 
