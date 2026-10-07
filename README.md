@@ -58,6 +58,11 @@ raised. If you start showing money raised, update the caption beneath it too.
 image is optional; without one, YouTube's own thumbnail is used. The homepage shows the newest
 three and `videos.html` shows them all.
 
+**Adding a series (playlist)** — add an entry to `SAJDA_SERIES` in the same file with the
+playlist's `list` id (the part after `?list=` in the playlist link), then give each of its videos
+`series: '<that key>'`. The homepage shows the whole series as one card that plays the playlist;
+`videos.html` keeps every part as its own card and adds a "Play the full series" button.
+
 **Adding a document** — put the PDF in `assets/docs/` with a web-safe name (no spaces), then
 copy one of the `<article class="doc">` blocks in the Documents section of `index.html`.
 

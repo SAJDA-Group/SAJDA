@@ -709,6 +709,14 @@ section { padding-block: clamp(4.5rem, 9vw, 8rem); }
   letter-spacing: .06em;
   font-variant-numeric: tabular-nums;
 }
+.video-card--series { border-top: 3px solid var(--gold-500); }
+.video-card__time--series {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  text-transform: uppercase;
+}
+.video-card__time--series svg { width: 14px; height: 14px; }
 .video-card__body { display: flex; flex-direction: column; gap: .45rem; padding: 1.25rem 1.4rem 1.5rem; }
 .video-card__tag {
   font-size: .72rem;
