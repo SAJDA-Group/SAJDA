@@ -9,6 +9,30 @@
    ========================================================================== */
 var SAJDA_VIDEOS = [
   {
+    id: 'CbmjGDq13Ow',
+    title: 'Ujumbe kutoka SAJDA 1/3: Hapa Ndipo Wanasomea',
+    tag: 'Sheikh Bashir · Part 1',
+    duration: '1:10',
+    thumb: 'assets/img/videos/ujumbe-sehemu-1.jpg',
+    desc: 'Students who have studied under a tree for two years, in rain or sun. In Kiswahili, with English subtitles.'
+  },
+  {
+    id: 'xFBPRIIhlRE',
+    title: 'Ujumbe kutoka SAJDA 2/3: Madarasa na Wakfu',
+    tag: 'Sheikh Bashir · Part 2',
+    duration: '1:21',
+    thumb: 'assets/img/videos/ujumbe-sehemu-2.jpg',
+    desc: 'The plan to build classrooms, and a Waqf to pay teachers and keep the madrasas running. In Kiswahili, with English subtitles.'
+  },
+  {
+    id: '8N4p-2M5tU4',
+    title: 'Ujumbe kutoka SAJDA 3/3: Harambee ya Desemba',
+    tag: 'Sheikh Bashir · Part 3',
+    duration: '1:11',
+    thumb: 'assets/img/videos/ujumbe-sehemu-3.jpg',
+    desc: 'An invitation to every Muslim, sponsor and leader to stand with SAJDA at the December 2026 Harambee. In Kiswahili, with English subtitles.'
+  },
+  {
     id: 'Mnc3_APnppo',
     title: 'Morning in the Madrasa',
     tag: 'Madrasa Life',
