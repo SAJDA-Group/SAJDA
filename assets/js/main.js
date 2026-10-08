@@ -241,4 +241,37 @@
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
   });
+  /* --- Contact form (Web3Forms) ---------------------------------------- */
+  /* Sends without leaving the page. Without JS the form posts normally and
+     Web3Forms shows its own thank-you page. */
+  var msgForm = document.querySelector('[data-message-form]');
+  if (msgForm && window.fetch) {
+    var status = msgForm.querySelector('.message__status');
+    var sendBtn = msgForm.querySelector('button[type="submit"]');
+    var say = function (text, cls) {
+      status.textContent = text;
+      status.className = 'message__status' + (cls ? ' ' + cls : '');
+    };
+    msgForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      sendBtn.disabled = true;
+      say('Sending…');
+      fetch(msgForm.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(msgForm)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (!data.success) throw new Error(data.message || 'failed');
+          msgForm.reset();
+          say('Thank you. Your message has been sent, and the committee will get back to you, in shaa Allah.', 'is-ok');
+        })
+        .catch(function () {
+          say('Sorry, the message could not be sent. Please try again, or contact us on WhatsApp.', 'is-err');
+        })
+        .then(function () { sendBtn.disabled = false; });
+    });
+  }
+
 })();
