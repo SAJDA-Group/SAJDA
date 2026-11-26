@@ -12,6 +12,12 @@
    ========================================================================== */
 var SAJDA_VIDEOS = [
   {
+    id: '67AV3WXjJgY',
+    title: 'Madrasa Teachers Across Marsabit',
+    tag: 'Teacher Deployment',
+    desc: 'On 13 November 2026, SAJDA sent teachers to its madrasa centres across Marsabit, with thanks to the Akhira Project.'
+  },
+  {
     id: 'CbmjGDq13Ow',
     series: 'ujumbe',
     title: 'Ujumbe kutoka SAJDA 1/3: Hapa Ndipo Wanasomea',
