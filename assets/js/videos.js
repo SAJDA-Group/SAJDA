@@ -12,6 +12,13 @@
    ========================================================================== */
 var SAJDA_VIDEOS = [
   {
+    id: 'lTkDuku1VnY',
+    title: 'SAJDA Centre Visits: Madrasa Progress Report',
+    tag: 'Progress Report',
+    duration: '8:44',
+    desc: 'A week after the teachers arrived, our team made a surprise visit to Karra, Adan Sora, Gombo, Masjid Sunna and Kubi Bagasa. Full classes, and children teaching each other.'
+  },
+  {
     id: '67AV3WXjJgY',
     title: 'Madrasa Teachers Across Marsabit',
     tag: 'Teacher Deployment',
